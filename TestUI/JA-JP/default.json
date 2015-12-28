@@ -1,0 +1,6 @@
+{
+	"btnScan":"スキャン",
+	"drScanner":"Diamond Ring Scanner",
+	"hintClick":"スキャンを開始する前にホームネットワークに接続している端末の電源をすべてONにしてください。",
+	"hintWait":"スキャンしています"
+}

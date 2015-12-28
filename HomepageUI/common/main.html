@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="./main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="underlayer">
+
+    <div class="head" id="caption">
+        <div class="_float_right windowCtrl">
+            <div class="win_close clickable" id="homepageui_close"></div>
+        </div>
+        <div class="_float_right windowMin">
+            <div class="win_min clickable" id="homepageui_min"></div>
+        </div>
+        <div class="clickable fb" id="homepageui_feedback" title="feedback">
+            <img src="images/popup/feedback/f.png">
+        </div>
+        <div class="title">
+            <img src="images/logo33_housecall.png">
+        </div>
+        <div class="version">1.1.1136</div>
+    </div>
+
+    <div class="body">
+        <div id="upper" >
+            <div class="_float_left left">
+                <p class="scanText scanText_1" l10n="hintClick_1">Are your home</p>
+                <p class="scanText scanText_2" l10n="hintClick_2">network devices Safe?</p>
+                <ul>
+                    <li><p class="scanText scanText_3" l10n="hintClick_3"> •  Check your device security issue</p></li>
+                    <li><p class="scanText scanText_4" l10n="hintClick_4"> •  Protect your privacy and data</p></li>
+                </ul>
+                <p class="scanText scanText_5" l10n="hintClick_5">Please power on all your home network devices before scan</p>
+                <div class="clickable btn_scan" id="homepageui_scan" l10n="Scan">Scan</div>
+            </div>
+            <div class="_float_right right">
+                <img id="status" src="images/house.png">
+            </div>
+        </div>
+
+        <div class="_float_left" id="bottom">
+            <img src="images/Trend.png">
+        </div>
+    </div>
+
+</div>
+<div class="toplayer">
+    <div class="feedback">
+        <div class="feedback_head">
+            <div class="_float_right windowCtrl">
+                <div class="win_close clickable" id="feedback_close"></div>
+            </div>
+            <div class="feedback_title">
+                <span l10n="feedback">Feedback</span>
+            </div>
+        </div>
+        <div class="feedback_mid">
+            <div class="rating">
+                <p l10n="rating">Rating:</p>
+                <img class="star clickable" id="star_1" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_2" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_3" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_4" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_5" src="images/popup/feedback/starg.png"/>
+            </div>
+
+            <textarea id="suggestiontext_en">Your comments are appreciated.
+1.Have you encountered any problems?
+2.Do you have any suggestions for improvement?
+3.Do you have any other feedback?
+            </textarea>
+            <textarea id="suggestiontext_jp">品質向上のため、ぜひフィードバックをご記入ください。
+1. 何か問題が発生しましたか？
+2. 品質向上のために何か改善点はございますか？
+3. その他、何かございましたらご自由にお聞かせください。
+            </textarea>
+
+            <div class="email">
+                <p l10n="Email">Leave your email address if you’d like us to follow up with you.</p>
+                <input type="text" id="emailtext" value="example@email.com" />
+            </div>
+        </div>
+        <div class="feedback_foot clickable" id="feedback_submit" l10n="Submit">Submit</div>
+    </div>
+</div>
+</body>
+</html>

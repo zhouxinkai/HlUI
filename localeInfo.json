@@ -1,0 +1,18 @@
+{
+	"defaultLocal" : "EN-US",
+	"localMapping" : [
+		{ "lcid" : 1041 , "localeName" : "JA-JP" },
+		{ "lcid" : 10249 , "localeName" : "EN-US" },
+        { "lcid" : 4105 , "localeName" : "EN-US" },
+        { "lcid" : 9225 , "localeName" : "EN-US" },
+        { "lcid" : 6153 , "localeName" : "EN-US" },
+        { "lcid" : 8201 , "localeName" : "EN-US" },
+        { "lcid" : 13321 , "localeName" : "EN-US" },
+        { "lcid" : 7177 , "localeName" : "EN-US" },
+        { "lcid" : 11273 , "localeName" : "EN-US" },
+        { "lcid" : 2057 , "localeName" : "EN-US" },
+        { "lcid" : 12297 , "localeName" : "EN-US" },
+        { "lcid" : 1033 , "localeName" : "EN-US" },
+		{ "lcid" : 1028 , "localeName" : "EN-US" }
+	]
+}

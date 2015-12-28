@@ -1,0 +1,45 @@
+@import url("skin:global_l10n.css");
+html{
+	background-color:transparent;
+	line-height:1.5em;
+	margin:0;
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style-type: none;
+}
+._float_left {float:left;}
+._float_right {float:right;}
+.clickable{
+	behavior:clickable;
+	cursor:pointer;
+}
+
+
+.button{
+	width:48px;
+	min-width:auto;
+	padding-left:15px;
+	padding-right:15px;
+	color:white;
+	text-align:center;
+	line-height:2em;
+	background-color:#0061be;
+	cursor:pointer;
+	display:inline;
+	behavior:clickable;
+	white-space:nowrap;
+}
+.button:hover{
+	background-color:#307eca;
+}
+.button:active{
+	background-color:#005ab1;
+}
+.button:disabled{
+	background-color:#BBBBBB;
+}

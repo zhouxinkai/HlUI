@@ -1,0 +1,31 @@
+@set v-scrollbar-ex
+{
+    .prev, .next, .next-page, .prev-page{ 
+        display: none;
+    }
+
+    .slider { 
+        background-color: rgba(32,32,32,0.2);
+        min-height: 25px;
+        width: 8px;
+        margin-left: 5px;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+  
+    .next:disabled, .slider:disabled, .prev:disabled { 
+        height: 0; 
+        border: none; 
+        foreground-image: none; 
+    }
+  
+    .base { 
+        width: 8px; 
+        background-color: #323232;
+    } 
+}
+
+* { vertical-scrollbar: v-scrollbar-ex; } /* all scrollable elements will have our small scrollbar now */
+

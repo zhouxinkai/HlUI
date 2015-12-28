@@ -1,0 +1,1501 @@
+@import url("skin:global.css");
+@import url("l10n.css");
+@import url("scrollbar.css");
+
+body{
+    border-left:1px solid rgb(216, 220, 221);
+    border-right:1px solid rgb(216, 220, 221);
+    border-bottom:1px solid rgb(216, 220, 221);
+    border-top:5px solid #f20e00;
+    width:800px;
+    height:530px;
+    margin:0;
+    overflow:hidden;
+
+    background-color: white;  /*背景颜色*/
+    position:relative;   /*让body的子元素以body为定位基准*/
+}
+p{
+    margin:0;
+    padding:0;
+    border:0;
+}
+/*===============================================*/
+.underlayer{
+    height:100%;
+    width:100%;
+}
+.head{
+    height:44px;
+    background-color: #ffffff;
+    /*	background:url(images/header_bg.png) no-repeat 0 0;*/
+}
+.head .windowCtrl{
+    height:10px;
+    width:10px;
+    margin-top:14px;
+    margin-right:19px;
+    position:absolute;  /*定位基准是body*/
+    top:0;
+    right:0;
+    /*	margin-top: 14px;
+        margin-right: 14px;*/
+}
+.head .win_close {
+    height:100%;
+    width:100%;
+    background:url(images/btn_close.png) no-repeat 0 0;
+}
+.head .win_close:hover {
+    background-position:-10px 0px;
+}
+
+.head .win_close:active {
+    background-position:-20px 0px;
+}
+
+.windowMin{
+    height:10px;
+    width:12px;
+    margin-top:18px;
+    margin-right: 13px;
+    position:absolute;  /*定位基准是body*/
+    top:0px;
+    right:28px;
+    /*	margin-top: 14px;
+        margin-right: 14px;*/
+}
+.win_min {
+    height:100%;
+    width:100%;
+    background:url(images/minimize.png) no-repeat 0 0;
+}
+.title{
+    width:244px;
+    height:33px;
+    margin-top:11px;
+    margin-left:19px;
+    display: inline;
+}
+.version{
+    font-family: 'Interstate';
+    font-size: 12px;
+    color: #323232;
+    margin-top: 28px;
+    margin-left: 17px;
+}
+.fb{
+    width: 14px;
+    height: 13px;
+    margin-top: 12px;
+    margin-right:12px ;
+    /*margin-right:58px ;*/
+    float: right;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 45px;*/
+}
+/*===============================================*/
+.mid{
+    height:120px;
+    width: 800px;
+    border-bottom:1px solid rgb(216, 220, 221) ;
+    background-color: #ffffff;
+    display:block;
+    overflow:hidden;
+}
+.mid .left{
+    margin-top:15px;
+    margin-left: 98px;
+    display:inline;
+    width:88px;
+    height: 88px;
+    float:left;
+    overflow:hidden;
+    /*background-image: url(images/cry.png);*/
+    background-position:0 0;
+    background-repeat: no-repeat;
+    background-size: 88px 88px;
+}
+#progressTextWrapper{
+    height: 100%;
+    width: 100%;
+    background:url(images/round0.png) no-repeat 0 0;
+    background-size: 88px 88px;
+    margin:0 auto;
+    text-align:center;
+    /*display: none;*/
+    /*    border:1px solid rgb(216, 220, 221);*/
+}
+
+#progressText{
+    display: inline-block;
+    font-size:40px;
+    line-height:60px;
+    margin-top:3px;
+    margin-left: 15px;
+    padding:0px;
+    color:black;
+}
+#progressText sup{
+    font-size:15px;
+}
+/*===============================================*/
+.mid .right{
+    margin-top:35px;
+    margin-right: 85px;
+    display:inline;
+    height:65px;
+    width:490px;
+    float:right;
+    overflow:hidden;
+    /*    border:1px solid rgb(216, 220, 221);*/
+}
+#hintWait{
+    margin-top:15px;
+    font-family:'Interstate';
+    font-size: 18px;
+    color: #323232;
+    text-align:left;
+    /*display: none;*/
+}
+.btn_rescan{
+    width: 102px;
+    height: 36px;
+    margin-top:1px;
+    margin-right: 0;
+    float: right;
+    background: url(images/rescan_btn.png) no-repeat 0 0;
+    font-family: 'Interstate';
+    font-size: 14px;
+    color: #323232;
+    text-align: center;
+    line-height: 36px;
+}
+#ScanResult{
+    display: none;
+}
+#ScanResultText{
+    text-align:left;
+    font-family:'Interstate';
+    font-weight: bold;
+    font-size:30px;
+    line-height:100%;
+    margin-bottom:8px;
+}
+#ScanResultDetail{
+    font-family:'Interstate';
+    font-size: 16px;
+    color: #323232;
+    text-align:left;
+    padding-left:3px;
+}
+/*#wifiStatus #link{*/
+/*text-align:right;*/
+/*}*/
+
+/*===============================================*/
+/*===============================================*/
+.bottom{
+    width: 800px;
+    height:365px;
+    background-color:#ffffff;
+    position: relative;
+}
+/*===============================================*/
+#DeviceDivCount{
+    height:100%;
+    width:750px;
+    overflow:auto;
+
+    margin:0 0 0 50px ;
+    flow:horizontal-flow;
+}
+#DeviceDivCount .device
+{
+    display:inline-block;
+    width:175px;
+    height:160px;
+    /*float: left;*/
+}
+#DeviceDivCount .device .content{
+    display:inline-block;
+    float:left;
+    overflow:auto;
+    width:175px;
+    height:180px;
+
+    background-image: url(images/newIcon/unknown.png);
+    background-size: 92px 92px;
+    background-repeat: no-repeat;
+    background-position: center 30px;
+    text-align:center;
+    position: relative;
+    /*behavior: tm_tooltip;*/
+}
+
+#DeviceDivCount .safe_hint{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left:105px;
+}
+#DeviceDivCount .load{
+    display: none;
+    position: absolute;
+    top:22px;
+    left: 33px;
+}
+#DeviceDivCount .content .wording{
+    display: inline-block;
+    text-align: center;
+    width: 175px;
+    height: 48px;
+    overflow-y: hidden;
+    font-family:'Interstate';
+    font-size: 13px;
+    color: #323232;
+    margin:0 auto;
+    padding:0;
+    position: absolute;
+    top: 128px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.wording p
+{
+    margin: -2px 0 -3px 0;
+}
+.wording .wstrCompany
+{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wording .m_wstrCategory
+{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#DeviceDivCount .click_area
+{
+    width: 92px;
+    height: 92px;
+    position: absolute;
+    top: 29px;
+    left:41px;
+}
+/*================popup for details===============================*/
+.inAreaShow{
+    width:92px;
+    height:92px;
+    /*border:1px solid blue;*/
+}
+.tooltipBox {
+    /*display:inline-block;*/
+    /*border:1px solid red;*/
+    /*behavior: tm_tooltip;*/
+    display: none;
+}
+popup.none
+{
+    width:232px;
+    /*height:180px;*/
+    border:none;
+    background-color: transparent;
+    background-image:url(images/popup/details/rect.png) ;
+    background-repeat: expand;
+    background-position: 40px 40px 40px 40px;
+}
+
+.details_div{
+    margin:0;
+    overflow:hidden;
+    display: none;
+}
+.details_head{
+    height:25px;
+    margin-top: 11px;
+    margin-left: 22px;
+    margin-right: 15px;
+}
+.details_head .red
+{
+    display: none;
+}
+.details_head .green
+{
+    display: none;
+}
+.details_body{
+    margin-top: 11px;
+    margin-left: 20px;
+    margin-bottom: 11px;
+    width: 200px;
+    display: none;
+}
+
+.details_body ._float_left{
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+    /*height: 20px;*/
+    width: 50px;
+    font-family:'Interstate';
+    font-size: 12px;
+    color: #323232;
+}
+.details_body ._float_right{
+    display: inline-block;
+    margin: 0;
+    text-align: right;
+    /*border: 1px solid blue;*/
+    /*height: 20px;*/
+    width: 130px;
+    font-family:'Interstate';
+    font-size: 12px;
+    color: #323232;
+}
+.details_body .device_info{
+    display: none;
+}
+/*===============================================*/
+popup.unknown_tip
+{
+    width:232px;
+    /*height:180px;*/
+    border:none;
+    background-color: transparent;
+    background-image:url(images/popup/details/rect.png) ;
+    background-repeat: expand;
+    background-position: 40px 40px 40px 40px;
+    text-align: left;
+}
+.unknown_hint{
+    margin-top: 11px;
+    margin-left: 22px;
+    margin-right: 15px;
+    margin-bottom: 11px;
+}
+/*===============================================*/
+#DeviceDivCount .num{
+    margin-top: 30px;
+    margin-left:105px;
+    width:30px;
+    height: 30px;
+    background: url(images/blue.png) no-repeat 0 0;
+    text-align: center;
+}
+#DeviceDivCount .num span{
+    display: inline-block;
+    text-align: center;
+    font-family:'Interstate';
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    margin:5px auto;
+    padding:0;
+    border:0;
+}
+
+
+/*===============================================*/
+#pre_loading{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#pre_loading .pre1{
+    position: absolute;
+    top:56px;
+    left: 49px;
+}
+#pre_loading .pre2{
+    position: absolute;
+    top:2px;
+    left: 280px;
+}
+#pre_loading .pre3
+{
+    position: absolute;
+    top: 5px;
+    right: 38px;
+}
+/*===============================================*/
+#pre_loading{
+    /*display: none;*/
+}
+#DeviceDivCount{
+    display: none;
+}
+.device_example{
+    display: none;
+}
+.after_example{
+    display:none;
+}
+.unknown_total_example{
+    display: none;
+}
+/*===============================================*/
+.toplayer{
+    height:100%;
+    width:100%;   /*宽度和高度设置成和body相等*/
+    position:absolute;
+    top:0px;
+    left:0px;
+    /*background-color: rgba(255,255,255,0.8);*/
+    background-color:rgba(250,250,250,0.1);
+    /*display: none;*/
+}
+.feedback{
+    width:400px;
+    height:390px;
+    border-left:1px solid rgb(216, 220, 221);
+    border-right:1px solid rgb(216, 220, 221);
+    border-bottom:1px solid rgb(216, 220, 221);
+    border-top:none;
+    margin:78px auto;    /*margin-top,margin-bottom均为60px；而margin-left,margin-right均为auto*/
+    background-color:rgba(250,249,246,1);
+    /*background-color: rgba(255,255,255,1);*/
+    position:relative;
+}
+.feedback_head{
+    border-top:5px solid #f20e00;
+    height: 35px;
+    margin-bottom: 20px;
+}
+.feedback_head .windowCtrl{
+    height:10px;
+    width:10px;
+    margin-top:15px;
+    margin-right: 20px;
+    float: right;
+}
+.feedback_head .win_close {
+    height:100%;
+    width:100%;
+    background:url(images/btn_close.png) no-repeat 0 0;
+}
+.feedback_head .win_close:hover {
+    background-position:-10px 0px;
+}
+
+.feedback_head .win_close:active {
+    background-position:-20px 0px;
+}
+.feedback_title{
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+    /*width: 85px;*/
+    /*height: 20px;*/
+
+    font-family:'Interstate';
+    font-weight:bold;
+    font-size: 20px;
+    color: #323232;
+}
+.feedback_mid{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.rating{
+    height: 27px;
+    line-height: 27px;
+    margin-bottom: 14px;
+}
+.rating p{
+    float: left;
+    font-family:'Interstate';
+    color: #323232;
+    font-size: 13px;
+}
+#suggestiontext_en{
+    display: block;
+    width: 360px;
+    height: 160px;
+    padding-top: 16px;
+    padding-left: 25px;
+    border: 1px solid rgb(216, 220, 221);
+    background-color:rgba(250,249,246,1);
+    margin-bottom: 15px;
+
+    font-family:'Interstate';
+    font-size: 13px;
+    color: #a0a0a0;
+    line-height: 24px;
+    overflow: hidden;
+    value:"Your comments are appreciated.
+    1.Have you encountered any problems?
+    2.Do you have any suggestions for improvement?
+    3.Do you have any other feedback?";
+
+    focus-on!:
+    (self:value=="Your comments are appreciated.
+1.Have you encountered any problems?
+2.Do you have any suggestions for improvement?
+3.Do you have any other feedback?")
+? (self:value="") # ();
+
+    focus-off!:(
+self:value=="") ?
+(self:value="Your comments are appreciated.
+1.Have you encountered any problems?
+2.Do you have any suggestions for improvement?
+3.Do you have any other feedback?")
+# ();
+}
+#suggestiontext_jp{
+    display: none;
+    width: 360px;
+    height: 160px;
+    padding-top: 16px;
+    padding-left: 25px;
+    border: 1px solid rgb(216, 220, 221);
+    background-color:rgba(250,249,246,1);
+    margin-bottom: 15px;
+
+    font-family:'Interstate';
+    font-size: 13px;
+    color: #a0a0a0;
+    line-height: 24px;
+    overflow: hidden;
+    value:"品質向上のため、ぜひフィードバックをご記入ください。
+    1. 何か問題が発生しましたか？
+    2. 品質向上のために何か改善点はございますか？
+    3. その他、何かございましたらご自由にお聞かせください。";
+
+    focus-on!:
+    (self:value=="品質向上のため、ぜひフィードバックをご記入ください。
+1. 何か問題が発生しましたか？
+2. 品質向上のために何か改善点はございますか？
+3. その他、何かございましたらご自由にお聞かせください。")
+? (self:value="") # ();
+
+    focus-off!:(
+self:value=="") ?
+(self:value="品質向上のため、ぜひフィードバックをご記入ください。
+1. 何か問題が発生しましたか？
+2. 品質向上のために何か改善点はございますか？
+3. その他、何かございましたらご自由にお聞かせください。")
+# ();
+}
+.email p{
+    float: left;
+    font-family:'Interstate';
+    color: #323232;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+#emailtext{
+    display: inline-block;
+    width: 360px;
+    padding-left:25px ;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid rgb(216, 220, 221);
+    background-color:rgba(250,249,246,1);
+
+    font-family:'Interstate';
+    font-size: 13px;
+    color: #a0a0a0;
+    overflow: hidden;
+    value:"example@email.com";
+    focus-on!:(self:value=="example@email.com") ? (self:value="") # ();
+    focus-off!:(self:value=="") ? (self:value="example@email.com") # ();
+}
+.feedback_foot{
+    width: 102px;
+    height: 35px;
+    margin-top: 8px;
+    margin-right: 20px;
+    float: right;
+
+    line-height: 35px;
+    background: url(images/popup/feedback/Submitgray.png) repeat 0 0;
+
+    font-family: 'Interstate';
+    font-size: 15px;
+    color: #323232;
+    text-align: center;
+}
+.feedback_foot:hover{
+    background-image: url(images/popup/feedback/Submit.png);
+}
+
+/*===============================================*/
+.internet{
+    border-left:1px solid rgb(216, 220, 221);
+    border-right:1px solid rgb(216, 220, 221);
+    border-bottom:1px solid rgb(216, 220, 221);
+    border-top:none;
+    width:400px;
+    /*height:223px;*/
+    overflow:hidden;
+
+    background-color: white;  /*背景颜色*/
+    position:relative;   /*让body的子元素以body为定位基准*/
+    margin:160px auto;    /*margin-top,margin-bottom均为78px；而margin-left,margin-right均为auto*/
+    background-color:rgba(250,249,246,1);
+}
+.submit_data_no_internet{
+    border-left:1px solid rgb(216, 220, 221);
+    border-right:1px solid rgb(216, 220, 221);
+    border-bottom:1px solid rgb(216, 220, 221);
+    border-top:none;
+    width:400px;
+    /*height:223px;*/
+    overflow:hidden;
+
+    background-color: white;  /*背景颜色*/
+    position:relative;   /*让body的子元素以body为定位基准*/
+    margin:160px auto;    /*margin-top,margin-bottom均为78px；而margin-left,margin-right均为auto*/
+    background-color:rgba(250,249,246,1);
+}
+.internet_head{
+    height:45px;
+    border-top:5px solid #f20e00;
+    margin-bottom: 27px;
+    /*	background:url(images/header_bg.png) no-repeat 0 0;*/
+}
+.internet_head .windowCtrl{
+    height:10px;
+    width:10px;
+    margin-top:20px;
+    margin-right:20px;
+    position:absolute;  /*定位基准是body*/
+    top:0;
+    right:0;
+    /*	margin-top: 14px;
+        margin-right: 14px;*/
+}
+.internet_head .win_close {
+    height:100%;
+    width:100%;
+    background:url(images/btn_close.png) no-repeat 0 0;
+}
+.internet_head .win_close:hover {
+    background-position:-10px 0px;
+}
+
+.internet_head .win_close:active {
+    background-position:-20px 0px;
+}
+.internet_title{
+    width:330px;
+    height:30px;
+    margin-top:15px;
+    margin-left:20px;
+    display: inline;
+    float:left;
+
+    font-family:'Interstate';
+    font-weight:bold;
+    font-size: 20px;
+    color: #323232;
+}
+/*===============================================*/
+.internet_mid{
+    height:49px;
+    line-height: 49px;
+    text-align: center;
+    margin-bottom: 26px;
+    display:block;
+    overflow:hidden;
+}
+
+/*===============================================*/
+.internet_bottom{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    position: relative;
+}
+.internet_bottom p{
+    font-family:'Interstate';
+    font-size: 14px;
+    color: #323232;
+    margin-bottom: 9px;
+}
+/*===============================================*/
+.gt20{
+    border-left:1px solid rgb(216, 220, 221);
+    border-right:1px solid rgb(216, 220, 221);
+    border-bottom:1px solid rgb(216, 220, 221);
+    border-top:none;
+    width:370px;
+    /*height:174px;*/
+    overflow:hidden;
+
+    background-color: white;  /*背景颜色*/
+    position:relative;   /*让body的子元素以body为定位基准*/
+    margin:160px auto;    /*margin-top,margin-bottom均为78px；而margin-left,margin-right均为auto*/
+    background-color:rgba(250,249,246,1);
+}
+.gt20_head{
+    height:45px;
+    border-top:5px solid #f20e00;
+    margin-bottom: 10px;
+    /*	background:url(images/header_bg.png) no-repeat 0 0;*/
+}
+.gt20_head .windowCtrl{
+    height:10px;
+    width:10px;
+    margin-top:20px;
+    margin-right:20px;
+    position:absolute;  /*定位基准是body*/
+    top:0;
+    right:0;
+    /*	margin-top: 14px;
+        margin-right: 14px;*/
+}
+.gt20_head .win_close {
+    height:100%;
+    width:100%;
+    background:url(images/btn_close.png) no-repeat 0 0;
+}
+.gt20_head .win_close:hover {
+    background-position:-10px 0px;
+}
+
+.gt20_head .win_close:active {
+    background-position:-20px 0px;
+}
+.gt20_title{
+    width:250px;
+    height:25px;
+    margin-top:15px;
+    margin-left:20px;
+    display: inline;
+    float:left;
+
+    font-family:'Interstate';
+    font-weight:bold;
+    font-size: 20px;
+    color: #323232;
+}
+/*===============================================*/
+.gt20_mid{
+    text-align: left;
+    margin-bottom: 10px;
+    display:block;
+    overflow:hidden;
+
+    flow:horizontal;
+
+    width: 370px;
+}
+.gt20_mid .gantanhao{
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
+    background: url(images/confirm/gantan.png) no-repeat 0 0;
+}
+.gt20_mid .gt20_content{
+    display: inline-block;
+    width: 280px;
+    font-family:'Interstate';
+    font-size: 14px;
+    line-height:22px;
+    margin-left: 15px;
+    color: #323232;
+
+    /*height:40px;*/
+
+    text-align:left;
+}
+/*===============================================*/
+.gt20_bottom{
+    width: 102px;
+    height: 36px;
+    line-height: 36px;
+    background: url(images/confirm/button.png) no-repeat 0 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+
+    font-family: 'Interstate';
+    font-size: 14px;
+    color: #323232;
+}
+/*===============================================*/
+.confirm{
+    border-left:1px solid rgb(216, 220, 221);
+    border-right:1px solid rgb(216, 220, 221);
+    border-bottom:1px solid rgb(216, 220, 221);
+    border-top:none;
+    width:370px;
+    /*height:174px;*/
+    overflow:hidden;
+
+    background-color: white;  /*背景颜色*/
+    position:relative;   /*让body的子元素以body为定位基准*/
+    margin:160px auto;    /*margin-top,margin-bottom均为78px；而margin-left,margin-right均为auto*/
+    background-color:rgba(250,249,246,1);
+}
+.confirm_head{
+    height:45px;
+    border-top:5px solid #f20e00;
+    margin-bottom: 10px;
+    /*	background:url(images/header_bg.png) no-repeat 0 0;*/
+}
+.confirm .windowCtrl{
+    height:10px;
+    width:10px;
+    margin-top:20px;
+    margin-right:20px;
+    position:absolute;  /*定位基准是body*/
+    top:0;
+    right:0;
+    /*	margin-top: 14px;
+        margin-right: 14px;*/
+}
+.confirm_head .win_close {
+    height:100%;
+    width:100%;
+    background:url(images/btn_close.png) no-repeat 0 0;
+}
+.confirm_head .win_close:hover {
+    background-position:-10px 0px;
+}
+
+.confirm_head .win_close:active {
+    background-position:-20px 0px;
+}
+.confirm_title{
+    width:250px;
+    height:25px;
+    margin-top:15px;
+    margin-left:20px;
+    display: inline;
+    float:left;
+
+    font-family:'Interstate';
+    font-weight:bold;
+    font-size: 20px;
+    color: #323232;
+}
+/*===============================================*/
+.confirm_mid{
+    height:34px;
+
+    text-align: left;
+    margin-bottom: 10px;
+    display:block;
+    overflow:hidden;
+}
+.confirm_mid .gantanhao{
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
+    background: url(images/confirm/gantan.png) no-repeat 0 0;
+}
+.confirm_mid p{
+    width: 280px;
+    font-family:'Interstate';
+    font-size: 14px;
+    line-height:22px;
+    margin-right: 20px;
+    margin-top: 6px;
+    color: #323232;
+}
+/*===============================================*/
+.confirm_bottom{
+    margin-right: 20px;
+    margin-top: 25px;
+    font-family: 'Interstate';
+    font-size: 14px;
+    color: #323232;
+}
+#confirm_ok,#confirm_cancel{
+    width: 102px;
+    height: 36px;
+    line-height: 36px;
+    background: url(images/confirm/button.png) no-repeat 0 0;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*===============================================*/
+.section
+{
+    /*float: left;*/
+    width: 687px;
+    /*height: 360px;*/
+
+    margin-right: 46px;
+    background-image: url(images/line/line_0.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*border-top:1px solid gray;*/
+    border-bottom:1px solid #e5e5e5;
+    margin-top: -12px;
+    /*display: none;*/
+    /*border: 1px solid blue;*/
+    display: inline-block;
+    /*overflow: auto;*/
+}
+.section .windowCtrl
+{
+    padding-top: 10px;
+    height: 10px;
+}
+.section .win_close{
+    float: right;
+    margin-top: 5px;
+    height:10px;
+    width:15px;
+    background:url(images/section_xiala.png) no-repeat 0 0;
+}
+/*.section .win_close:hover {
+    background-position:-10px 0px;
+}
+
+.section .win_close:active {
+    background-position:-20px 0px;
+}*/
+/*===============================================*/
+.section .amazon_info
+{
+    float: left;
+    /*width: 250px;*/
+    /*border: 1px solid red;*/
+    font-family: 'Interstate';
+    font-size: 14px;
+    color:#323232;
+    text-align: left;
+    /*display: none;*/
+}
+/*===============================================*/
+.amazon_info .model_title
+{
+    width: 210px;
+    height: 84px;
+    /*white-space: nowrap;*/
+    margin: 11px 40px 23px 0;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/*.amazon_info .model_title:hover*/
+/*{*/
+    /*overflow: visible;*/
+/*}*/
+.amazon_info .big_img
+{
+    width: 210px;
+    height: 135px;
+    margin: 0 auto 24px 0;
+    text-align: center;
+}
+.amazon_info .amazon_rating img
+{
+    float: left;
+    margin-top: 3px;
+}
+/*===============================================*/
+.amazon_bottom
+{
+    height: 68px;
+}
+.amazon_bottom .price
+{
+    font-size: 16px;
+}
+/*===============================================*/
+.section .issue_edit
+{
+    /*float: right;*/
+    /*border: 1px solid green;*/
+    margin-left: 250px;
+    /*width: auto;*/
+}
+/*===============================================*/
+.issue{
+    border-bottom:1px solid #e5e5e5;
+
+    font-family: 'Interstate';
+    font-size: 14px;
+    color: #323232;
+    text-align: left;
+    /*display: none;*/
+}
+.issue_head{
+    /*margin-top: 5px;*/
+    margin-bottom: 16px;
+    height: 36px;
+    overflow: hidden;
+}
+.issue_title{
+    display: inline-block;
+    margin-left: 9px;
+    /*height: 40px;*/
+    /*padding-bottom: 5px;*/
+
+    font-weight:bold;
+    font-size: 20px;
+    color: #323232;
+}
+/*===============================================*/
+.issue_body{
+    /*margin-right: 10px;*/
+    margin-bottom: 10px;
+    /*margin-left: 3px;*/
+    /*flow:vertical;*/
+}
+.issue_body .setting
+{
+    /*flow:horizontal;*/
+    margin-bottom: 20px;
+    margin-left: 4px;
+}
+.issue_body .password
+{
+    /*flow:horizontal;*/
+    margin-bottom: 22px;
+    margin-left: 5px;
+}
+#router{
+    /*line-height:40px ;*/
+}
+.issue_body .issue_hint{
+    margin-left: 45px;
+    margin-right: 140px;
+    height:36px;
+    /*line-height:40px;*/
+    text-align:left;
+    /*border: 1px solid red;*/
+    word-break: break-all;
+}
+.setting_upper{
+    height: 40px;
+    width: 100%;
+    /*overflow:hidden;*/
+}
+.password_upper{
+    height: 40px;
+    width: 100%;
+    /*overflow:hidden;*/
+}
+.issue_body .windowCtrl{
+    height:35px;
+    width:100%;
+    /*margin-top:2px;*/
+    /*float: right;*/
+}
+.issue_body .change_setting_btn{
+    height:36px;
+    width:143px;
+    background:url(images/popup/issues/button.png) no-repeat 0 0;
+    line-height: 36px;
+    text-align: center;
+}
+.issue_body .change_password_btn {
+    display: inline-block;
+    height:36px;
+    width:143px;
+    background:url(images/popup/issues/button.png) no-repeat 0 0;
+
+    line-height: 36px;
+    text-align: center;
+}
+.issue_body .change_setting_btn:hover {
+    background-image: url(images/popup/issues/button_gray.png);
+}
+.issue_body .change_password_btn:hover {
+    background-image: url(images/popup/issues/button_gray.png);
+}
+.issue_info
+{
+    display: none;
+}
+/*.issue_body .win_close:active {*/
+/*background-position:-20px 0px;*/
+/*}*/
+/*===============================================*/
+.edit{
+    width:100%;
+    /*height:180px;*/
+}
+.edit_body{
+    display: inline-block;
+    /*float: right;*/
+    margin: 21px 14px 0 19px;
+    /*height: 135px;*/
+    width: 93%;
+    position: relative;
+}
+.edit_body ._float_left{
+    display: inline-block;
+    margin: 0 0 8px 0;
+    text-align: left;
+    /*height: 20px;*/
+    width: 60px;
+
+    font-family: 'Interstate';
+    font-size: 14px;
+    color: #323232;
+}
+.edit_body ._float_right{
+    display: inline-block;
+    margin: 0;
+    text-align: right;
+    /*border: 1px solid red;*/
+    /*height: 20px;*/
+    width: 200px;
+    font-family: 'Interstate';
+    font-size: 14px;
+    color: #323232;
+}
+.edit_body ._float_right input
+{
+    text-align: left;
+}
+.edit_body .edit_select
+{
+    float: right;
+    width: 170px;
+    text-align: left;
+}
+.edit_body .enedited
+{
+    display: none;
+}
+.edit_body .edit_or_save
+{
+    float: right;
+    margin: 0;
+
+    width: 102px;
+    height: 36px;
+    line-height: 36px;
+    background: url(images/popup/edit/edit.png) no-repeat 0 0;
+    text-align: center;
+}
+.edit_body .edit_or_save:hover
+{
+    background: url(images/popup/edit/edit_gray.png) no-repeat 0 0;
+}
+.edit_body .edit_or_save_gray
+{
+    float: right;
+    margin: 0;
+
+    width: 102px;
+    height: 36px;
+    line-height: 36px;
+    background: url(images/popup/edit/unedited.png) no-repeat 0 0;
+    text-align: center;
+    color: #c0c0c0;
+}
+.edit_body .save_success
+{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: none;
+}
+/*===============================================*/
+.unknown_section
+{
+    position: relative;
+}
+.unknown_section .unknown_device_list
+{
+    /*float: left;*/
+    margin-left: 68px;
+    margin-top: 13px;
+    margin-right: 9px;
+    margin-bottom: 0;
+}
+.unknown_section .save_success
+{
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    display: none;
+}
+.unknown_total .unknown_device_list
+{
+    display: none;
+}
+.unknown{
+    width:441px;
+    height:330px;
+    border-left:1px solid rgb(216, 220, 221);
+    border-right:1px solid rgb(216, 220, 221);
+    border-bottom:1px solid rgb(216, 220, 221);
+    border-top:none;
+    margin:78px auto;    /*margin-top,margin-bottom均为78px；而margin-left,margin-right均为auto*/
+    background-color:rgba(250,249,246,1);
+}
+.unknown_head{
+    border-top:5px solid #f20e00;
+    height: 32px;
+    margin-bottom: 18px;
+}
+.unknown_head .windowCtrl{
+    height:10px;
+    width:10px;
+    margin-top:17px;
+    margin-right:23px;
+    float: right;
+}
+.unknown_head .win_close {
+    height:100%;
+    width:100%;
+    background:url(images/btn_close.png) no-repeat 0 0;
+}
+.unknown_head .win_close:hover {
+    background-position:-10px 0px;
+}
+
+.unknown_head .win_close:active {
+    background-position:-20px 0px;
+}
+.unknown_title{
+    margin-left: 23px;
+    margin-top: 15px;
+    /*width: 146px;*/
+    /*height: 15px;*/
+    font-family:'Interstate';
+    font-size: 20px;
+    color: #323232;
+    float: left;
+}
+.unknown_body{
+    margin-left: 23px;
+    margin-right: 23px;
+    margin-bottom: 10px;
+    height: 200px;
+    width: 395px;
+}
+.pp{
+    margin-bottom: 25px;
+    width: 380px;
+}
+.unknown_body p{
+    text-align: left;
+    font-family:'Interstate';
+    font-size: 14px;
+    color: #323232;
+}
+.unknown_device{
+    width: 100%;
+    /*height: 50px;*/
+    margin-bottom: 16px;
+    display: block;
+    flow:horizontal;
+    /*border-bottom: 1px solid gray;*/
+    /*border: 1px solid red;*/
+}
+.unknown_device .img{
+    display: inline-block;
+    /*float: left;*/
+    width: 44px;
+    height: 44px;
+    background: url(images/popup/unknown/unknown_small.png) no-repeat 0 0;
+}
+.unknown_device .unknown_cell{
+    display: inline-block;
+    /*float: left;*/
+    /*clear:both;*/
+    width: 140px;
+    /*width: 100px;*/
+    /*margin-left: 10px;*/
+    margin-right: 0;
+    flow:vertical;
+    /*height:50px;*/
+    /*line-height: 50px;*/
+}
+.unknown_foot{
+    width: 102px;
+    height: 35px;
+    margin-top: 15px;
+    /*margin-right: 47px;*/
+    float: right;
+}
+/*===============================================*/
+.container{
+}
+.unknown_device .unknown_select{
+    margin-top: 14px;
+}
+.unknownCompany{
+    /*float: left;*/
+    /*height:20px;*/
+    /*line-height:20px;*/
+    /*width:100%;*/
+    display:inline-block;
+    width: 100px;
+    height: 44px;
+    line-height: 44px;
+    margin-left: 19px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family:'Interstate';
+    /*font-weight:bold;*/
+    font-size: 14px;
+    color:#323232;
+    text-align:left;
+}
+.unknownIP{
+    display:inline-block;
+    /*float: left;*/
+    height:22px;
+    line-height:22px;
+    width:140px;
+    font-family:'Interstate';
+    font-size: 12px;
+    color:#323232;
+    text-align:left;
+}
+.unknownMac{
+    display:inline-block;
+    /*float: left;*/
+    height:22px;
+    line-height:22px;
+    width:140px;
+    font-family:'Interstate';
+    font-size: 12px;
+    color:#959595;
+    text-align:left;
+}
+/*===============================================*/
+.feedback{
+    display: none;
+}
+.edit{
+    /*display: none;*/
+}
+.issue{
+    /*display: none;*/
+}
+.unknown{
+    display: none;
+}
+.unknown_device_example{
+    display: none;
+}
+.internet{
+    display: none;
+}
+.submit_data_no_internet{
+    display: none;
+}
+.gt20{
+    display: none;
+}
+.confirm{
+    display: none;
+}
+.toplayer{
+    display: none;
+}
+.result_report
+{
+    display: none;
+}
+.section_example
+{
+    display: none;
+}
+.unknown_section_example
+{
+    display: none;
+}
+/*===============common================================*/
+._float_right{
+    float: right;
+}
+._float_left{
+    float: left;
+}
+/*===============================================*/
+
+.categorySelector {
+    display: inline-block;
+    /*clear:both;*/
+    /*float: left;*/
+    border: 1px solid rgb(191, 191, 191);
+    background-color: rgb(255, 255, 255);
+    height: 19px;
+    width: 170px;
+    /*width: 100px;*/
+    margin-top: 0;
+    /*margin-right:5px;*/
+    /*margin-left: 40px;*/
+    behavior: tm_dropdown;
+}
+
+.categorySelector:active {
+    border: 1px solid rgb(43, 153, 214);
+}
+
+.btnSelect {
+    flow: horizontal;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.selectedItem {
+    height: 19px;
+    font-family: 'Interstate';
+    font-size: 13px;
+    color:#323232;
+}
+
+.btnSelect .image{
+    width: 11px;
+    height: 7px;
+    margin-top: 6px;
+    /*margin-right: 20px;*/
+    background: url(images/xiala.png) no-repeat 0 0;
+}
+
+.categorySelector > popup {
+    border: 1px solid rgb(191, 191, 191);
+    background-color: rgb(255, 255, 255);
+    flow: vertical;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.categorySelector > popup > option
+{
+    width:100%;
+    width:100%;
+    height: 19px;
+    text-align: left;
+    vertical-align: middle;
+    font-family: 'Interstate';
+    font-size: 13px;
+    color:#323232;
+    padding-left: 11px;
+}
+
+.categorySelector > popup > option:hover {
+    color: rgb(228, 66, 78);
+    background-color: rgb(245, 245, 245);
+}

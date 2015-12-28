@@ -1,0 +1,23 @@
+{
+    "wndTitle":"TestUI",
+    "drScanner":"Diamond Ring Scanner",
+    "hintClick":"Please power on all your home network devices,and then click to scan.",
+    "btnScan":"Scan",
+    "selectinfo":"All the equipment DRScanner will scan your home，Do you agree that！",
+    "btnRefuse":"Refuse",
+    "btnAllow":"Allow",
+
+    "category_0":"--Please select--",
+    "category_1":"Router",
+    "category_2":"Windows PC",
+    "category_3":"Phone/Pad",
+    "category_4":"Home Audio & Theater",
+    "category_5":"Printer",
+    "category_6":"Network Storage",
+    "category_7":"Game Device",
+    "category_8":"TV",
+    "category_9":"IP Camera",
+    "category_10":"Mac PC",
+    "category_11":"Smart Home device",
+    "category_12":"Others"
+}

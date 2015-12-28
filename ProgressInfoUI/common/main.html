@@ -1,0 +1,748 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="./main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="underlayer">
+    <div class="head" id="caption">
+        <div class="_float_right windowCtrl">
+            <div class="win_close clickable" id="progressui_close"></div>
+        </div>
+        <div class="_float_right windowMin">
+            <div class="win_min clickable" id="progressui_min"></div>
+        </div>
+        <div class="clickable fb" id="progressui_feedback" title="feedback">
+            <img src="images/popup/feedback/f.png">
+        </div>
+
+        <div class="title _float_left">
+            <img src="images/logo33_housecall.png">
+        </div>
+        <div class="version _float_left">1.1.1136</div>
+
+    </div>
+    <div class="mid">
+        <div class="_float_left left">
+            <div id="progressTextWrapper" class="progressPage">
+                <span id="progressText">0<sup>%</sup></span>
+            </div>
+        </div>
+
+        <div class="_float_right right" id="hint">
+            <div id="hintItem">
+                <p l10n="hintWait" id="hintWait">Scanning ... , please wait for a moment.</p>
+            </div>
+            <div id="ScanResult">
+                <div class="clickable btn_rescan" id="progressui_rescan" l10n="Rescan">Rescan</div>
+                <p id="ScanResultText">Congratulations!</p>
+                <p id="ScanResultDetail">No hot risk found in your home devices.</p>
+
+                <!--<p class="linkWrapper"><a id="link" href="#" style="behavior:clickable tmbrowserlink" url="http://www.baidu.com" l10n="linkChangePwd">change password</a></p>-->
+            </div>
+        </div>
+
+    </div>
+    <div class="bottom">
+        <div id="pre_loading">
+            <img class="pre1" src="images/house/wording.gif">
+            <img class="pre2" src="images/house/house_round.gif">
+            <img class="pre3" src="images/house/cloud.gif">
+        </div>
+
+        <div id="DeviceDivCount" >
+            <!--<div class="section">
+            <div class="windowCtrl">
+                <div class="win_close clickable" id="section_close"></div>
+            </div>
+            <div class="amazon_info">
+                <div class="model_title">TP-LINK TL-WR841N Wireless N Router, Atheros, 2T2R, 2.4GHz, 802.11n/g/b, Built-in 4-port Switch, with 2 fixed antennas</div>
+                <div class="big_img"><img class="image" height="135px" src="images/newIcon/big-a182310bb1ea5f167e29c1aa72159055c0b0b732.jpg"/></div>
+                <div class="amazon_bottom">
+                    <div>
+                        <span class="amazon_rating" style="display: inline-block">
+                            <img class="amazon_star_1" src="images/star/100.png"/>
+                            <img class="amazon_star_2" src="images/star/100.png"/>
+                            <img class="amazon_star_3" src="images/star/100.png"/>
+                            <img class="amazon_star_4" src="images/star/100.png"/>
+                            <img class="amazon_star_5" src="images/star/100.png"/>
+                        </span>
+                        <span style="display: inline-block;margin-left: 3px">
+                            <span class="review_count">3351</span>
+                            <span l10n="customers_reviews" style="margin-top: 0">reviews</span>
+                        </span>
+                    </div>
+                    <div style="margin: 7px 0 5px 0;">
+                        <span l10n="price">Price: $</span>
+                        <span class="price">165.99</span>
+                    </div>
+                    <div class="website_url">
+                        <a  class="url" href="#" style="behavior:clickable tmbrowserlink" url="http://www.amazon.com/TP-LINK-TL-WR841N-Wireless-Atheros-antennas/dp/B00YBR4JLE%3FSubscriptionId%3DAKIAIV54ANHBGPNGK5EA%26tag%3DMyTag-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00YBR4JLE" l10n="check_on_amazon">Check on amazon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="issue_edit">
+                <div class="issue">
+                    <div class="issue_head">
+                        <img style="margin-left: 5px;margin-top: 5px" src="images/popup/issues/title.png">
+                        <span class="issue_title" l10n="Security_Issues">Security Issues</span>
+                    </div>
+                    <div class="issue_body">
+                        <div class="setting">
+                            <img class="_float_left" src="images/popup/issues/wifi.png">
+                            <div class="_float_right change_setting_btn clickable" id="issue_change_setting" l10n="change_settings">change settings</div>
+                            <div class="issue_hint" id="wifi">With no authentication or data encryption.</div>
+                        </div>
+
+                        <div class="password">
+                            <img class="_float_left" src="images/popup/issues/password.png">
+                            <div class="_float_right change_password_btn clickable" id="issue_change_password" l10n="change_password">change password</div>
+                            <div class="issue_hint" id="router">Risk: This Device uses default password.</div>
+                        </div>
+
+                        <div class="issue_info">
+                            <p class="issue_model"></p>
+                            <p class="issue_PortalURL"></p>
+                            <p class="issue_wifi_status"></p>
+                            <p class="issue_router_status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit">
+                    <div class="edit_body">
+                        <table class="_float_left" style="width: 260px;cellspacing:0;cellpadding:0;border-spacing:0; border:0">
+                            <tr>
+                                <td><span class="_float_left" l10n="IP">IP</span></td>
+                                <td><span class="ip _float_right">IP</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Mac">Mac</span></td>
+                                <td><span class="mac _float_right">Mac</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Hostname">Hostname</span></td>
+                                <td><span class="hostname _float_right">Hostname</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Company">Company</span></td>
+                                <td class="_float_right ">
+                                    <span class="_float_right unedited_company unedited">Company</span>
+                                    <input type="text" class="_float_right enedited_company enedited" style="width: 166px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Model">Model</span></td>
+                                <td class="_float_right ">
+                                    <span class="_float_right unedited_model unedited">Model</span>
+                                    <input type="text" class="_float_right enedited_model enedited" style="width: 166px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Category">Category</span></td>
+                                <td class="_float_right ">
+                                    <span class="_float_right unedited_category  unedited">Router</span>
+                                    <div class="categorySelector enedited_category enedited edit_select">
+                                        <div class="btnSelect">
+                                            <div class="selectedItem textCommon" l10n="category_0" value="0" value_original="" Vulnerability="1" wstrclassname=""></div>
+                                            <div class="image"></div>
+                                        </div>
+                                        <popup id="popupCategory">
+                                            <option value="1"  l10n="category_1">Router</option>
+                                            <option value="2"  l10n="category_2">Windows PC</option>
+                                            <option value="3"  l10n="category_3">Phone/Pad</option>
+                                            <option value="4"  l10n="category_4">Home Audio & Theater</option>
+                                            <option value="5"  l10n="category_5">Printer</option>
+                                            <option value="6"  l10n="category_6">Network Storage</option>
+                                            <option value="7"  l10n="category_7">Game Device</option>
+                                            <option value="8"  l10n="category_8">TV</option>
+                                            <option value="9"  l10n="category_9">IP Camera</option>
+                                            <option value="10" l10n="category_10">Mac PC</option>
+                                            <option value="11" l10n="category_11">Smart Home device</option>
+                                        </popup>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="clickable edit_or_save" id="edit_or_save_btn" l10n="Edit">Edit</div>
+                        <div class="edit_or_save_gray" l10n="Edit">Edit</div>
+                        <div class="save_success"><img src="images/save_success.png" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="device_0 device" >
+                <div class="content" ><img class="safe_hint"  src="images/dangerous.png" /> <img class="load"  src="images/blue_loading.gif" />
+                    <div class="wording" >
+                        <p class="wstrCompany" >FOSCAM</p>
+                        <p class="m_wstrCategory" >IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera </p>
+                    </div>
+                    <div class="click_area clickable"  id="progressui_dangerous_found_img_device_click" >
+                        <div class="details_body" ><span class="device_info" ><span class="wstrPortal" >https://192.168.1.133:443</span> <span class="wstrClassName" >device_0</span> <span class="eWifiStatus" >4</span> <span class="eRouterStatus" >1</span> <span class="bVulnerability" >1</span> <span class="wstrBigImgFileName" >big-112d764fe20c6f7e0f554c2ed8cb70ffdfda36cd.jpg</span> <span class="wstrSmallImgFileName" >small-112d764fe20c6f7e0f554c2ed8cb70ffdfda36cd.jpg</span> <span class="wstrModelTitle" >Foscam FI9821W V2 IP Camera HD 720P H.264 IR-Cut Free DDNS Onvif WHT</span> <span class="wstrWebsiteURL" >http://www.ebay.com/itm/Foscam-FI9821W-V2-IP-Camera-HD-720P-H-264-IR-Cut-Free-DDNS-Onvif-WHT-/251813861722?hash=item3aa146995a:g:YP8AAOSw~gRVy19z</span> <span class="wstrPrice" ></span> <span class="wstrRating" >4.2</span> <span class="wstrReviewCount" >0</span> <span class="ip" >192.168.1.133</span> <span class="mac" >00:62:6E:52:E6:F6</span> <span class="hostname" ></span> <span class="company" >FOSCAM</span> <span class="previousCompany" >FOSCAM</span> <span class="model" >FI9821W V2</span> <span class="previousModel" >FI9821W V2</span> <span class="category"  l10n="category_9" >IP Camera</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="device_1 device" >
+                <div class="content" ><img class="safe_hint"  src="images/dangerous.png" /> <img class="load"  src="images/blue_loading.gif" />
+                    <div class="wording" >
+                        <p class="wstrCompany" >I-O Data Device I-O Data Device I-O Data Device I-O Data Device I-O Data Device </p>
+                        <p class="m_wstrCategory" >IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera IP Camera </p>
+                    </div>
+                    <div class="click_area clickable"  id="progressui_dangerous_none_img_device_click" >
+                        <div class="details_body" ><span class="device_info" ><span class="wstrPortal" >http://192.168.1.100:80</span> <span class="wstrClassName" >device_1</span> <span class="eWifiStatus" >4</span> <span class="eRouterStatus" >1</span> <span class="bVulnerability" >1</span> <span class="wstrBigImgFileName" ></span> <span class="wstrSmallImgFileName" ></span> <span class="wstrModelTitle" ></span> <span class="wstrWebsiteURL" ></span> <span class="wstrPrice" ></span> <span class="wstrRating" >4.2</span> <span class="wstrReviewCount" >null</span> <span class="ip" >192.168.1.100</span> <span class="mac" >34:76:C5:31:65:04</span> <span class="hostname" ></span> <span class="company" >I-O Data Device</span> <span class="previousCompany" >I-O Data Device</span> <span class="model" >model_1</span> <span class="previousModel" >model_1</span> <span class="category"  l10n="category_9" >IP Camera</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="device_2 device" >
+                <div class="content" ><img class="safe_hint"  src="images/safe.png" /> <img class="load"  src="images/blue_loading.gif" />
+                    <div class="wording" >
+                        <p class="wstrCompany" >Dell Inc.</p>
+                        <p class="m_wstrCategory" >Unknown device</p>
+                    </div>
+                    <div class="click_area clickable"  id="progressui_safe_unknown_device_click" >
+                        <div class="details_body" ><span class="device_info" ><span class="wstrPortal" >https://192.168.1.105:443</span> <span class="wstrClassName" >device_2</span> <span class="eWifiStatus" >4</span> <span class="eRouterStatus" >0</span> <span class="bVulnerability" >0</span> <span class="wstrBigImgFileName" ></span> <span class="wstrSmallImgFileName" ></span> <span class="wstrModelTitle" ></span> <span class="wstrWebsiteURL" ></span> <span class="wstrPrice" ></span> <span class="wstrRating" ></span> <span class="wstrReviewCount" ></span> <span class="ip" >192.168.1.105</span> <span class="mac" >EC:17:2F:D1:AF:B7</span> <span class="hostname" >NJ-BRUCE-ZHOU</span> <span class="company" >Dell Inc.</span> <span class="previousCompany" >Dell Inc.</span> <span class="model" >OptiPlex 9020</span> <span class="previousModel" >OptiPlex 9020</span> <span class="category"  l10n="category_12" >Unknown</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="device_3 device" >
+                <div class="content" ><img class="safe_hint"  src="images/safe.png" /> <img class="load"  src="images/blue_loading.gif" />
+                    <div class="wording" >
+                        <p class="wstrCompany" >TP-LINK</p>
+                        <p class="m_wstrCategory" >Unknown device</p>
+                    </div>
+                    <div class="click_area clickable"  id="progressui_safe_unknown_device_click" >
+                        <div class="details_body" ><span class="device_info" ><span class="wstrPortal" >http://192.168.1.1:80</span> <span class="wstrClassName" >device_3</span> <span class="eWifiStatus" >4</span> <span class="eRouterStatus" >0</span> <span class="bVulnerability" >0</span> <span class="wstrBigImgFileName" >big-9887eb0c0a3c5cbc2d3a792b7febbd34c1a592ee.jpg</span> <span class="wstrSmallImgFileName" >small-9887eb0c0a3c5cbc2d3a792b7febbd34c1a592ee.jpg</span> <span class="wstrModelTitle" >TP-LINK TL-WR841N Wireless N Router Atheros 2T2R 2.4GHz 802.11n/g/b Built-in 4-port Switch with 2 fixed antennas</span> <span class="wstrWebsiteURL" >http://www.amazon.com/TP-LINK-TL-WR841N-Wireless-Atheros-antennas/dp/B008LA7AY0%3FSubscriptionId%3DAKIAIV54ANHBGPNGK5EA%26tag%3DMyTag-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB008LA7AY0</span> <span class="wstrPrice" >19.95</span> <span class="wstrRating" >4.2</span> <span class="wstrReviewCount" >8521</span> <span class="ip" >192.168.1.1</span> <span class="mac" >50:BD:5F:6A:6F:DE</span> <span class="hostname" ></span> <span class="company" >TP-LINK</span> <span class="previousCompany" >TP-LINK</span> <span class="model" >TL-WR841N</span> <span class="previousModel" >TL-WR841N</span> <span class="category"  l10n="category_12" >Unknown</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="device_4 device" >
+                <div class="content" ><img class="safe_hint"  src="images/safe.png" /> <img class="load"  src="images/blue_loading.gif" />
+                    <div class="wording" >
+                        <p class="wstrCompany" >Buffalo</p>
+                        <p class="m_wstrCategory" >Unknown device</p>
+                    </div>
+                    <div class="click_area clickable"  id="progressui_safe_unknown_device_click" >
+                        <div class="details_body" ><span class="device_info" ><span class="wstrPortal" >https://192.168.1.134:443</span> <span class="wstrClassName" >device_4</span> <span class="eWifiStatus" >4</span> <span class="eRouterStatus" >0</span> <span class="bVulnerability" >0</span> <span class="wstrBigImgFileName" ></span> <span class="wstrSmallImgFileName" ></span> <span class="wstrModelTitle" ></span> <span class="wstrWebsiteURL" ></span> <span class="wstrPrice" ></span> <span class="wstrRating" >4.2</span> <span class="wstrReviewCount" >null</span> <span class="ip" >192.168.1.134</span> <span class="mac" >CC:E1:D5:FA:52:70</span> <span class="hostname" ></span> <span class="company" >Buffalo</span> <span class="previousCompany" >Buffalo</span> <span class="model" ></span> <span class="previousModel" ></span> <span class="category"  l10n="category_12" >Unknown</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="device_5 clickable unknown_total device"  id="progressui_unknown_total_click"  titleid="unknown_tip" >
+                <div class="content" >
+                    <div class="num" ><span>3</span></div>
+                    <div class="wording" ><span class="wstrClassName"  style="display: none" >device_5</span>
+                        <p class="m_wstrCategory"  l10n="Unknown_device" >Unknown device</p>
+                    </div>
+                    <div class="tooltipBox" >
+                        <div class="inAreaShow" >
+                            <popup id="unknown_tip"  class="unknown_tip" >
+                                <div class="unknown_hint"  l10n="unknown_hint" >Sorry,below devices can not be recognized now,Please help to identify it/them.</div>
+                            </popup>
+                        </div>
+                    </div>
+                </div>
+                <div class="unknown_device_list" >
+                    <div class="unknown_device_0 unknown_device" >
+                        <div class="img" ></div>
+                        <div class="unknownCompany" >Dell Inc.</div>
+                        <div class="unknown_cell" >
+                            <div class="unknownIP" >192.168.1.105</div>
+                            <div class="unknownMac" >EC:17:2F:D1:AF:B7</div>
+                        </div>
+                        <div class="categorySelector unknown_select" >
+                            <div class="btnSelect" >
+                                <div class="selectedItem textCommon"  l10n="category_0"  value="0"  class_name="0"  wstrclassname="device_2" >--Please select--</div>
+                                <div class="image" ></div>
+                            </div>
+                            <popup id="popupCategory" >
+                                <option value="0"  l10n="category_0" >--Please select--</option>
+                                <option value="1"  l10n="category_1" >Router</option>
+                                <option value="2"  l10n="category_2" >Windows PC</option>
+                                <option value="3"  l10n="category_3" >Phone/Pad</option>
+                                <option value="4"  l10n="category_4" >Home Audio &amp; Theater</option>
+                                <option value="5"  l10n="category_5" >Printer</option>
+                                <option value="6"  l10n="category_6" >Network Storage</option>
+                                <option value="7"  l10n="category_7" >Game Device</option>
+                                <option value="8"  l10n="category_8" >TV</option>
+                                <option value="9"  l10n="category_9" >IP Camera</option>
+                                <option value="10"  l10n="category_10" >Mac PC</option>
+                                <option value="11"  l10n="category_11" >Smart Home device</option>
+                            </popup>
+                        </div>
+                    </div>
+                    <div class="unknown_device_1 unknown_device" >
+                        <div class="img" ></div>
+                        <div class="unknownCompany" >TP-LINK</div>
+                        <div class="unknown_cell" >
+                            <div class="unknownIP" >192.168.1.1</div>
+                            <div class="unknownMac" >50:BD:5F:6A:6F:DE</div>
+                        </div>
+                        <div class="categorySelector unknown_select" >
+                            <div class="btnSelect" >
+                                <div class="selectedItem textCommon"  l10n="category_0"  value="0"  class_name="0"  wstrclassname="device_3" >--Please select--</div>
+                                <div class="image" ></div>
+                            </div>
+                            <popup id="popupCategory" >
+                                <option value="0"  l10n="category_0" >--Please select--</option>
+                                <option value="1"  l10n="category_1" >Router</option>
+                                <option value="2"  l10n="category_2" >Windows PC</option>
+                                <option value="3"  l10n="category_3" >Phone/Pad</option>
+                                <option value="4"  l10n="category_4" >Home Audio &amp; Theater</option>
+                                <option value="5"  l10n="category_5" >Printer</option>
+                                <option value="6"  l10n="category_6" >Network Storage</option>
+                                <option value="7"  l10n="category_7" >Game Device</option>
+                                <option value="8"  l10n="category_8" >TV</option>
+                                <option value="9"  l10n="category_9" >IP Camera</option>
+                                <option value="10"  l10n="category_10" >Mac PC</option>
+                                <option value="11"  l10n="category_11" >Smart Home device</option>
+                            </popup>
+                        </div>
+                    </div>
+                    <div class="unknown_device_2 unknown_device" >
+                        <div class="img" ></div>
+                        <div class="unknownCompany" >Buffalo</div>
+                        <div class="unknown_cell" >
+                            <div class="unknownIP" >192.168.1.134</div>
+                            <div class="unknownMac" >CC:E1:D5:FA:52:70</div>
+                        </div>
+                        <div class="categorySelector unknown_select" >
+                            <div class="btnSelect" >
+                                <div class="selectedItem textCommon"  l10n="category_0"  value="0"  class_name="0"  wstrclassname="device_4" >--Please select--</div>
+                                <div class="image" ></div>
+                            </div>
+                            <popup id="popupCategory" >
+                                <option value="0"  l10n="category_0" >--Please select--</option>
+                                <option value="1"  l10n="category_1" >Router</option>
+                                <option value="2"  l10n="category_2" >Windows PC</option>
+                                <option value="3"  l10n="category_3" >Phone/Pad</option>
+                                <option value="4"  l10n="category_4" >Home Audio &amp; Theater</option>
+                                <option value="5"  l10n="category_5" >Printer</option>
+                                <option value="6"  l10n="category_6" >Network Storage</option>
+                                <option value="7"  l10n="category_7" >Game Device</option>
+                                <option value="8"  l10n="category_8" >TV</option>
+                                <option value="9"  l10n="category_9" >IP Camera</option>
+                                <option value="10"  l10n="category_10" >Mac PC</option>
+                                <option value="11"  l10n="category_11" >Smart Home device</option>
+                            </popup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="unknown_section section">
+                <div class="windowCtrl">
+                    <div class="win_close clickable" id="section_close"></div>
+                </div>
+                <div class="unknown_foot clickable" id="unknown_ok">
+                    <img src="images/popup/unknown/OK.png">
+                </div>
+                <div class="save_success"><img src="images/save_success.png" /></div>
+                <div class="unknown_device_list" ></div>
+            </div>-->
+        </div>
+
+        <div class="section_example">
+            <div class="windowCtrl">
+                <div class="win_close clickable" id="section_close"></div>
+            </div>
+            <div class="amazon_info">
+                <div class="model_title" title="">TP-LINK TL-WR841N Wireless N Router, Atheros, 2T2R, 2.4GHz, 802.11n/g/b, Built-in 4-port Switch, with 2 fixed antennas</div>
+                <div class="big_img"><img class="image" height="135px" src="images/newIcon/big-a182310bb1ea5f167e29c1aa72159055c0b0b732.jpg"/></div>
+                <div class="amazon_bottom">
+                    <div>
+                        <span class="amazon_rating" style="display: inline-block">
+                            <img class="amazon_star_1" src="images/star/100.png"/>
+                            <img class="amazon_star_2" src="images/star/100.png"/>
+                            <img class="amazon_star_3" src="images/star/100.png"/>
+                            <img class="amazon_star_4" src="images/star/100.png"/>
+                            <img class="amazon_star_5" src="images/star/100.png"/>
+                        </span>
+                        <span style="display: inline-block;margin-left: 3px">
+                            <span class="review_count">3351</span>
+                            <span l10n="customers_reviews" style="margin-top: 0">reviews</span>
+                        </span>
+                    </div>
+                    <div style="margin: 7px 0 5px 0;">
+                        <span l10n="price">Price: $</span>
+                        <span class="price">165.99</span>
+                    </div>
+                    <div class="website_url">
+                        <a  class="url" href="#" style="behavior:clickable tmbrowserlink" url="http://www.amazon.com/TP-LINK-TL-WR841N-Wireless-Atheros-antennas/dp/B00YBR4JLE%3FSubscriptionId%3DAKIAIV54ANHBGPNGK5EA%26tag%3DMyTag-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00YBR4JLE" l10n="check_on_amazon">Check on amazon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="issue_edit">
+                <div class="issue">
+                    <div class="issue_head">
+                        <img style="margin-left: 5px;margin-top: 5px" src="images/popup/issues/title.png">
+                        <span class="issue_title" l10n="Security_Issues">Security Issues</span>
+                    </div>
+                    <div class="issue_body">
+                        <div class="setting">
+                            <img class="_float_left" src="images/popup/issues/wifi.png">
+                            <div class="_float_right change_setting_btn clickable" id="issue_change_setting" l10n="change_settings">change settings</div>
+                            <div class="issue_hint" id="wifi">With no authentication or data encryption.</div>
+                        </div>
+
+                        <div class="password">
+                            <img class="_float_left" src="images/popup/issues/password.png">
+                            <div class="_float_right change_password_btn clickable" id="issue_change_password" l10n="change_password">change password</div>
+                            <div class="issue_hint" id="router">Risk: This Device uses default password.</div>
+                        </div>
+
+                        <div class="issue_info">
+                            <p class="issue_model"></p>
+                            <p class="issue_PortalURL"></p>
+                            <p class="issue_wifi_status"></p>
+                            <p class="issue_router_status"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit">
+                    <div class="edit_body">
+                        <table class="_float_left" style="width: 260px;cellspacing:0;cellpadding:0;border-spacing:0; border:0">
+                            <tr>
+                                <td><span class="_float_left" l10n="IP">IP</span></td>
+                                <td><span class="ip _float_right">IP</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Mac">Mac</span></td>
+                                <td><span class="mac _float_right">Mac</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Hostname">Hostname</span></td>
+                                <td><span class="hostname _float_right">Hostname</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Company">Company</span></td>
+                                <td class="_float_right ">
+                                    <span class="_float_right unedited_company unedited">Company</span>
+                                    <input type="text" class="_float_right enedited_company enedited" style="width: 166px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Model">Model</span></td>
+                                <td class="_float_right ">
+                                    <span class="_float_right unedited_model unedited">Model</span>
+                                    <input type="text" class="_float_right enedited_model enedited" style="width: 166px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="_float_left" l10n="Category">Category</span></td>
+                                <td class="_float_right ">
+                                    <span class="_float_right unedited_category  unedited">Router</span>
+                                    <div class="categorySelector enedited_category enedited edit_select">
+                                        <div class="btnSelect">
+                                            <div class="selectedItem textCommon" l10n="category_0" value="0" value_original="" Vulnerability="1" wstrclassname=""></div>
+                                            <div class="image"></div>
+                                        </div>
+                                        <popup id="popupCategory">
+                                            <option value="1"  l10n="category_1">Router</option>
+                                            <option value="2"  l10n="category_2">Windows PC</option>
+                                            <option value="3"  l10n="category_3">Phone/Pad</option>
+                                            <option value="4"  l10n="category_4">Home Audio & Theater</option>
+                                            <option value="5"  l10n="category_5">Printer</option>
+                                            <option value="6"  l10n="category_6">Network Storage</option>
+                                            <option value="7"  l10n="category_7">Game Device</option>
+                                            <option value="8"  l10n="category_8">TV</option>
+                                            <option value="9"  l10n="category_9">IP Camera</option>
+                                            <option value="10" l10n="category_10">Mac PC</option>
+                                            <option value="11" l10n="category_11">Smart Home device</option>
+                                        </popup>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="clickable edit_or_save" id="edit_or_save_btn" l10n="Edit">Edit</div>
+                        <div class="edit_or_save_gray" l10n="Edit">Edit</div>
+                        <div class="save_success"><img src="images/save_success.png" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="device_example">
+            <div class="content">
+                <img class="safe_hint" src="images/safe.png">
+                <img class="load" src="images/blue_loading.gif">
+                <div class="wording">
+                    <p class="wstrCompany" ></p>
+                    <p class="m_wstrCategory" ></p>
+                </div>
+                <div class="click_area">
+                    <div class="details_body">
+                        <span class="device_info">
+                            <span class="wstrPortal"></span>
+                            <span class="wstrClassName"></span>
+
+                            <span class="eWifiStatus"></span>
+                            <span class="eRouterStatus"></span>
+                            <span class="bVulnerability"></span>
+
+                            <span class="wstrBigImgFileName"></span>
+                            <span class="wstrSmallImgFileName"></span>
+                            <span class="wstrModelTitle"></span>
+                            <span class="wstrWebsiteURL"></span>
+                            <span class="wstrWebsiteName"></span>
+                            <span class="wstrPrice"></span>
+                            <span class="wstrRating"></span>
+                            <span class="wstrReviewCount"></span>
+                            <span class="ip"></span>
+                            <span class="mac"></span>
+                            <span class="hostname"></span>
+                            <span class="company"></span>
+                            <span class="previousCompany"></span>
+                            <span class="model"></span>
+                            <span class="previousModel"></span>
+                            <span class="category" l10n=""></span>
+
+                            <!--<span class="special_info">
+                                <span class="secure_ssid">true</span>
+                            </span>-->
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="unknown_total_example unknown_total" id="progressui_unknown_total_click">
+            <div class="content">
+                <div class="num">
+                    <span>0</span>
+                </div>
+                <div class="wording">
+                    <span class="wstrClassName" style="display: none"></span>
+                    <p class="m_wstrCategory" l10n="Unknown_device">Unknown Device</p>
+                </div>
+                <div class="tooltipBox">
+                    <div class="inAreaShow">
+                        <popup id="unknown_tip" class="unknown_tip">
+                            <div class="unknown_hint" l10n="unknown_hint">Sorry,below devices can not be recognized now,Please help to identify it/them.</div>
+                        </popup>
+                    </div>
+                </div>
+            </div>
+            <div class="unknown_device_list"></div>
+        </div>
+        <div class="unknown_section_example section">
+            <div class="windowCtrl">
+                <div class="win_close clickable" id="section_close"></div>
+            </div>
+            <div class="unknown_foot clickable" id="unknown_ok">
+                <img src="images/popup/unknown/OK.png">
+            </div>
+            <div class="save_success"><img src="images/save_success.png" /></div>
+            <div class="unknown_device_list" ></div>
+        </div>
+    </div>
+</div>
+
+<div class="toplayer">
+    <div class="feedback">
+        <div class="feedback_head">
+            <div class="_float_right windowCtrl">
+                <div class="win_close clickable" id="feedback_close"></div>
+            </div>
+            <div class="feedback_title">
+                <span l10n="feedback">Feedback</span>
+            </div>
+        </div>
+        <div class="feedback_mid">
+            <div class="rating">
+                <p l10n="rating">Rating:</p>
+                <img class="star clickable" id="star_1" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_2" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_3" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_4" src="images/popup/feedback/starg.png"/>
+                <img class="star clickable" id="star_5" src="images/popup/feedback/starg.png"/>
+            </div>
+
+            <textarea id="suggestiontext_en">Your comments are appreciated.
+1.Have you encountered any problems?
+2.Do you have any suggestions for improvement?
+3.Do you have any other feedback?
+            </textarea>
+            <textarea id="suggestiontext_jp">品質向上のため、ぜひフィードバックをご記入ください。
+1. 何か問題が発生しましたか？
+2. 品質向上のために何か改善点はございますか？
+3. その他、何かございましたらご自由にお聞かせください。
+            </textarea>
+
+            <div class="email">
+                <p l10n="Email">Leave your email address if you’d like us to follow up with you.</p>
+                <input type="text" id="emailtext" value="example@email.com" />
+            </div>
+        </div>
+        <div class="feedback_foot clickable" id="feedback_submit" l10n="Submit">Submit</div>
+    </div>
+    <div class="unknown">
+        <div class="unknown_head">
+            <div class="_float_right windowCtrl">
+                <div class="win_close clickable" id="unknown_close"></div>
+            </div>
+            <div class="unknown_title">
+                <span l10n="Unknown_device">Unknown Device</span>
+            </div>
+        </div>
+        <div class="unknown_body">
+            <div class="pp">
+                <p l10n="pp_1">Sorry,below devices can not be recognized now.</p>
+                <p l10n="pp_2">Please help to identify it/them.</p>
+            </div>
+            <div class="unknown_device_list">
+                <div class="unknown_device">
+                    <div class="img"></div>
+                    <div class="unknown_cell"><!--cell-->
+                        <div class="unknownCompany">Meizu</div><!--tableCompany-->
+                        <div class="unknownIP">192.168.1.1</div><!--spanIP-->
+                        <div class="unknownMac">38:83:45:51:E8:90</div><!--spanMac-->
+                    </div>
+                    <div class="categorySelector unknown_select">
+                        <div class="btnSelect">
+                            <div class="selectedItem textCommon" l10n="category_0" value="0" class_name="0"></div>
+                            <div class="image"></div>
+                        </div>
+                        <popup id="popupCategory">
+                            <option value="0"  l10n="category_0">--Please select--</option>
+                            <option value="1"  l10n="category_1">Router</option>
+                            <option value="2"  l10n="category_2">Windows PC</option>
+                            <option value="3"  l10n="category_3">Phone/Pad</option>
+                            <option value="4"  l10n="category_4">Home Audio & Theater</option>
+                            <option value="5"  l10n="category_5">Printer</option>
+                            <option value="6"  l10n="category_6">Network Storage</option>
+                            <option value="7"  l10n="category_7">Game Device</option>
+                            <option value="8"  l10n="category_8">TV</option>
+                            <option value="9"  l10n="category_9">IP Camera</option>
+                            <option value="10" l10n="category_10">Mac PC</option>
+                            <option value="11" l10n="category_11">Smart Home device</option>
+                        </popup>
+                    </div>
+                </div>
+                <!--由C++ code 动态加入Unknown device list-->
+            </div>
+        </div>
+        <div class="unknown_foot clickable" id="unknown_ok">
+            <img src="images/popup/unknown/OK.png">
+        </div>
+        <div class="save_success"><img src="images/save_success.png" /></div>
+    </div>
+    <div class="unknown_device_example" >
+        <div class="img" ></div>
+        <div class="unknownCompany" >Meizu</div>
+        <div class="unknown_cell" >
+            <div class="unknownIP" >192.168.1.108</div>
+            <div class="unknownMac" >70:F1:A1:95:3E:EF</div>
+        </div>
+        <div class="categorySelector unknown_select" >
+            <div class="btnSelect" >
+                <div class="selectedItem textCommon"  l10n="category_0"  value="0"  class_name="0"  wstrClassName="device_6" >--Please select--</div>
+                <div class="image" ></div>
+            </div>
+            <popup id="popupCategory" >
+                <option value="0"  l10n="category_0" >--Please select--</option>
+                <option value="1"  l10n="category_1" >Router</option>
+                <option value="2"  l10n="category_2" >Windows PC</option>
+                <option value="3"  l10n="category_3" >Phone/Pad</option>
+                <option value="4"  l10n="category_4" >Home Audio &amp; Theater</option>
+                <option value="5"  l10n="category_5" >Printer</option>
+                <option value="6"  l10n="category_6" >Network Storage</option>
+                <option value="7"  l10n="category_7" >Game Device</option>
+                <option value="8"  l10n="category_8" >TV</option>
+                <option value="9"  l10n="category_9" >IP Camera</option>
+                <option value="10"  l10n="category_10" >Mac PC</option>
+                <option value="11"  l10n="category_11" >Smart Home device</option>
+            </popup>
+        </div>
+    </div>
+    <div class="internet">
+        <div class="internet_head">
+            <!--<div class="_float_right windowCtrl">-->
+            <!--<div class="win_close clickable" id="internet_close"></div>-->
+            <!--</div>-->
+            <div class="internet_title">
+                <span id="internet_hint" l10n="noInternet">No Internet Connection</span>
+            </div>
+        </div>
+
+        <div class="internet_mid">
+            <img src="images/no_internet.png">
+        </div>
+        <div class="internet_bottom">
+            <p class="_float_left" l10n="try_again">Please connect your PC to the Internet,and try again.</p>
+            <img class="_float_right clickable"  id="internet_ok" src="images/ok.png">
+        </div>
+    </div>
+    <div class="submit_data_no_internet">
+        <div class="internet_head">
+            <!--<div class="_float_right windowCtrl">-->
+            <!--<div class="win_close clickable" id="internet_close"></div>-->
+            <!--</div>-->
+            <div class="internet_title">
+                <span l10n="noInternet">No Internet Connection</span>
+            </div>
+        </div>
+
+        <div class="internet_mid">
+            <img src="images/no_internet.png">
+        </div>
+        <div class="internet_bottom">
+            <p class="_float_left" l10n="try_again">Please connect your PC to the Internet,and try again.</p>
+            <img class="_float_right clickable"  id="internet_submit_data_ok" src="images/ok.png">
+        </div>
+    </div>
+    <div class="gt20">
+        <div class="gt20_head">
+            <!--<div class="_float_right windowCtrl">-->
+            <!--<div class="win_close clickable" id="gt20_close"></div>-->
+            <!--</div>-->
+            <div class="gt20_title">
+                <span l10n="Error">Error</span>
+            </div>
+        </div>
+
+        <div class="gt20_mid">
+            <div class="gantanhao"></div>
+            <div class="gt20_content" l10n="gt20_hint">There are too many devices connected in the network.This tool is only for the home network devices scan with limited devices.</div>
+        </div>
+        <div class="gt20_bottom _float_right clickable" id="gt20_ok" l10n="OK">
+            OK
+        </div>
+    </div>
+    <div class="confirm">
+        <div class="confirm_head">
+            <div class="confirm_title">
+                <span l10n="Confirm">Confirm</span>
+            </div>
+        </div>
+
+        <div class="confirm_mid">
+            <div class="gantanhao _float_left"></div>
+            <p class="_float_right" l10n="confirm_hint">Do you want to quit now?</p>
+        </div>
+        <div class="confirm_bottom" >
+            <div id="confirm_cancel" class="_float_right clickable" l10n="Cancel">Cancel</div>
+            <div id="confirm_ok" class="_float_right clickable" l10n="OK">OK</div>
+        </div>
+    </div>
+</div>
+<div class="result_report">
+    <table class="report_tr_example">
+        <tr>
+            <td>
+                <p class="report_ip"></p>
+                <p class="report_mac"></p>
+            </td>
+            <td>
+                <p class="report_category"></p>
+            </td>
+            <td>
+                <p class="report_hostname"></p>
+            </td>
+            <td>
+                <p class="report_brand"></p>
+                <p class="report_model"></p>
+            </td>
+            <td>
+                <ul class="report_issue">
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

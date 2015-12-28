@@ -1,0 +1,18 @@
+@import url("skin:global.css");
+@import url("l10n.css");
+@import url("scrollbar.css");
+body{
+	border:1px solid rgb(216, 220, 221);
+    width:800px;
+	height:530px;
+	margin:0;
+	overflow:hidden;
+
+	background-color: white;  /*背景颜色*/
+	position:relative;   /*让body的子元素以body为定位基准*/
+}
+p{
+    margin:0;
+    padding:0;
+    border:0;
+}
